@@ -1,14 +1,8 @@
-import React, { useState } from "react";
+import React from 'react'
 
-function Header (){
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-  function onDarkModeClick() {
-    setIsDarkMode((isDarkMode) => !isDarkMode);
-  }
-
+const Header = ({isDarkMode,onDarkModeClick}) => {
   return (
-    <div className={"App " + (isDarkMode ? "dark" : "light")}>
+    <div>
       <header>
         <h2>Shopster</h2>
         <button onClick={onDarkModeClick}>
@@ -16,6 +10,7 @@ function Header (){
         </button>
       </header>
     </div>
-  );
+  )
 }
-export default Header;
+
+export default Header
